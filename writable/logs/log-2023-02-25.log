@@ -1,0 +1,245 @@
+INFO - 2023-02-25 03:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 03:16:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 03:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 03:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-02-25 03:36:39 --> "otentifikasi" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('otentifikasi')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->enableFilter('otentifikasi', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-02-25 05:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 05:39:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 05:41:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-02-25 05:41:55 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in D:\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'pengaduan_masya...', 3306, '', 0)
+#1 D:\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\APL_Pengaduan\vendor\codeigniter4\framework\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\APL_Pengaduan\vendor\codeigniter4\framework\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 D:\APL_Pengaduan\app\Controllers\Controllermasyarakat.php(30): CodeIgniter\BaseModel->find()
+#7 D:\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Controllermasyarakat->login()
+#8 D:\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controllermasyarakat))
+#9 D:\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\APL_Pengaduan\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\APL_Pengaduan\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\APL_Pengadua...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in D:\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\APL_Pengaduan\vendor\codeigniter4\framework\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\APL_Pengaduan\vendor\codeigniter4\framework\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#5 D:\APL_Pengaduan\app\Controllers\Controllermasyarakat.php(30): CodeIgniter\BaseModel->find()
+#6 D:\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Controllermasyarakat->login()
+#7 D:\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controllermasyarakat))
+#8 D:\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\APL_Pengaduan\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\APL_Pengaduan\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\APL_Pengadua...')
+#11 {main}
+CRITICAL - 2023-02-25 05:41:55 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `petugas`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 3 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\Controllermasyarakat.php(30): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Controllermasyarakat->login()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controllermasyarakat))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-02-25 06:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:13:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:13:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:14:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:14:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:16:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:16:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:17:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:18:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:24:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:51:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:52:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-02-25 06:52:30 --> "otentifikasimasyarakat" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('otentifikasimasyarakat')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->enableFilter('otentifikasimasyarakat', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-02-25 06:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 06:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 07:07:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:34:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-02-25 10:35:13 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'db_pengaduan_ma...', 3306, '', 0)
+#1 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\APL_Pengaduan\app\Controllers\Controllermasyarakat.php(30): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Controllermasyarakat->login()
+#8 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controllermasyarakat))
+#9 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\APL_Pengaduan\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#5 C:\xampp\htdocs\APL_Pengaduan\app\Controllers\Controllermasyarakat.php(30): CodeIgniter\BaseModel->find()
+#6 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Controllermasyarakat->login()
+#7 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controllermasyarakat))
+#8 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\APL_Pengaduan\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-02-25 10:35:13 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `petugas`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 3 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\Controllermasyarakat.php(30): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Controllermasyarakat->login()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controllermasyarakat))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-02-25 10:36:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:36:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-02-25 10:36:37 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'db_pengaduan_ma...', 3306, '', 0)
+#1 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\APL_Pengaduan\app\Controllers\Controllermasyarakat.php(30): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Controllermasyarakat->login()
+#8 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controllermasyarakat))
+#9 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\APL_Pengaduan\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#5 C:\xampp\htdocs\APL_Pengaduan\app\Controllers\Controllermasyarakat.php(30): CodeIgniter\BaseModel->find()
+#6 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Controllermasyarakat->login()
+#7 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controllermasyarakat))
+#8 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\APL_Pengaduan\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-02-25 10:36:37 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `petugas`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 3 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\Controllermasyarakat.php(30): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Controllermasyarakat->login()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controllermasyarakat))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-02-25 10:49:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:51:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-02-25 10:51:31 --> mysqli_sql_exception: Unknown column 'd_pengaduan' in 'on clause' in C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\APL_Pengaduan\app\Controllers\Controllermasyarakat.php(83): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Controllermasyarakat->pengaduan()
+#8 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controllermasyarakat))
+#9 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\APL_Pengaduan\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\APL_Pengaduan\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-02-25 10:51:31 --> Unknown column 'd_pengaduan' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pengaduan`
+JOIN `masyarakat` ON `masyarakat`.`nik`=`pengaduan`.`nik`
+JOIN `tanggapan` ON `d_pengaduan`=`pengaduan`.`id_pengaduan`
+WHERE `nama` = :nama:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Controllermasyarakat.php(83): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Controllermasyarakat->pengaduan()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controllermasyarakat))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-02-25 10:51:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:51:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:51:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:52:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:52:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:52:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:52:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:52:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:52:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:53:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:53:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:54:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:54:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:54:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:54:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:54:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-25 10:54:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
